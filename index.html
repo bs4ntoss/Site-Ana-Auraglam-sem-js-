@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<HTML lang="PT-BR">
+    <head>
+        <title> ANAAURAGLAM </title>
+         <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animação.css">
+    </head>
+
+
+    <body>
+    
+      <img src="logo final.jpg" alt="Marca d'água" class="watermark">
+
+        <!--header-->
+    <header>
+        <nav>
+            <a href="index.html" class="logo" title="Voltar ao início" aria-label="Voltar ao início"> &#128132; Ana Auraglam</a>
+            <img src="logo final.jpg" alt="Logo" class="nav-logo">
+            <button id="menuToggle" onclick="toggleMenu()">☰</button>   
+            <ul id="navMenu">
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+
+
+     <main class="main">
+     <div class="box"> </div>
+     <div class="conteiner">
+
+
+        
+       
+      <form id="searchForm" role="search" aria-label="Pesquisar no site">
+  <label for="q" class="sr-only">Pesquisar</label>
+  <div class="search">
+    <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M10 4a6 6 0 1 1 0 12A6 6 0 0 1 10 4zm0-2a8 8 0 1 0 5.293 13.707l4.5 4.5 1.414-1.414-4.5-4.5A8 8 0 0 0 10 2z"/>
+    </svg>
+    <input id="q" name="q" class="search__input" type="search"
+           placeholder="Busque produtos, termos, etc." autocomplete="off" />
+    <button class="search__button" type="submit">Buscar</button>
+  </div>
+</form>
+
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Impede envio normal
+
+  const termo = document.getElementById('q').value.trim().toLowerCase();
+
+  if (termo === 'catálogo' || termo === 'catalogo') {
+    window.location.href = 'catalogo.html';
+  } else if (termo === 'sobre') {
+    window.location.href = 'sobre.html';
+  } else if (termo === 'contato') {
+    window.location.href = 'contato.html';
+  } else {
+    alert('Nenhum resultado encontrado para: ' + termo);
+  }
+});
+</script>
+
+
+
+
+<nav class="catalog-links">
+    <a href="catalogo.html#rosto" class="cat-btn">Rosto</a>
+    <a href="catalogo.html#boca" class="cat-btn">Boca</a>
+    <a href="catalogo.html#olhos" class="cat-btn">Olhos</a>
+    <a href="catalogo.html#skin-care" class="cat-btn">Skin Care</a>
+</nav>
+
+
+
+<style>
+  .catalog-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+ .cat-btn {
+    background-color: #FA8072;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-decoration: none; /* Remove sublinhado do link */
+    display: inline-block; /* Permite padding e margin */
+}
+ .cat-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    color: #fff; /* Mantém a cor do texto no hover */
+}
+</style>
+
+<script>
+function showContent(categoria) {
+  document.querySelectorAll('.cat-content').forEach(div => {
+    div.style.display = 'none';
+  });
+  document.getElementById(categoria).style.display = 'block';
+}
+</script>
+
+      <h2 style="   font-family: cursive;
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center; text-align: justify; color: #FA8072;"> Destaques da semana </h2>
+
+    <meta charset="UTF-8">
+<title>4 Imagens Lado a Lado</title>
+<style>
+    .galeria {
+        display: flex; /* coloca as imagens lado a lado */
+        justify-content: center; /* distância igual entre as imagens */
+        gap: 40px; /* espaço entre as imagens */
+        align-items: center; /* alinha verticalmente */
+        max-width: 800px; /* largura máxima do container */
+        margin: 0 auto; /* centraliza na página */
+    }
+    .galeria img {
+        width: 180px; /* tamanho das imagens */
+        height: auto; /* mantém proporção */
+        border-radius: 8px; /* bordas arredondadas (opcional) */
+        display: block;
+    }
+</style>
+</head>
+<body>
+
+<div class="galeria">
+    
+   <img src="Gloss-Destaque.jpg" alt="Gloss-Destaque">
+    <img src="Sombra-destaque.jpg" alt="Sombra-destaque">
+</div>
+
+      <div>
+
+  <h1 style="color: #FA8072; margin-top: 200px;"> Cadastre-se e descubra um mundo de novidades e as mais variadas opções que mais se pareçam com você </h1>
+    <form class="form">
+      <fieldset class="grupo">
+        <div class="campo">
+          <label for="nome"> <strong> Nome </strong></label>
+          <input type="text" name="nome" id="nome" required>
+        </div>
+        <div class="campo">
+          <label for="sobrenome"> <strong> Sobrenome </strong></label>
+          <input type="text" name="sobrenome" id="sobrenome" required>
+        </div>
+        <div class="campo">
+          <label for="email"> <strong> Email </strong> </label>
+          <input type="email" name="Email" id="Email" required>
+        </div>
+        <div class="campo">
+          <label for="Gênero"> <strong> Gênero </strong> </label>
+          <label>
+            <input type="radio" name="Gênero" id="Masculino"> Masculino
+          </label>
+          <label>
+            <input type="radio" name="Gênero" id="Feminino"> Feminino
+          </label>
+          <label>
+            <input type="radio" name="Gênero" id="Outro"> Outro
+          </label>
+        </div>
+
+      </div>
+        
+ <input class="botao" type="submit" value="Enviar">
+
+   </fieldset>
+      <br>
+
+
+
+    </form>
+
+    <br>
+
+<!-- Footer -->
+  <footer>
+       <p>&copy; 2025 Ana Auraglam. Todos os direitos reservados.</p>
+      <p>&#129309;&#127760; A melhor escolha para você! </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    </body>
+</html>
